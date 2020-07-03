@@ -1,0 +1,55 @@
+// Hydrogen / Components / Breadcrumb
+
+@forward "./node_modules/@hydrogen-design-system/core/dist/styles/defaults";
+@use "./node_modules/@hydrogen-design-system/core/dist/styles/defaults" as variables;
+@use "./node_modules/@hydrogen-design-system/core/dist/styles/maps" as maps;
+@use "./node_modules/@hydrogen-design-system/core/dist/styles/h2-core";
+
+[data-h2-enabled] {
+
+    @each $colorKey, $colorValue in maps.$color-map {
+
+        [data-h2-breadcrumb*="#{$colorKey}"] {
+            
+            // List
+            [data-h2-breadcrumb-list] {
+                margin: calc((#{variables.$margin} / 2) * -1);
+                list-style: none;
+                padding-left: 0;
+            }
+
+            // List Item
+            [data-h2-breadcrumb-list-item] {
+                display: inline-block;
+                line-height: calc(#{variables.$line-height} * 1.5);
+                margin: 0;
+            }
+
+            // Links
+            [data-h2-breadcrumb-link] {
+                color: $colorValue;
+                display: inline-block;
+                margin: calc(#{variables.$margin} / 2);
+            }
+
+            // Current Page
+            [aria-current] {
+                color: $colorValue;
+                font-weight: bold;
+                pointer-events: none;
+                text-decoration: none;
+                &+[data-h2-breadcrumb-divider] {
+                    display: none;
+                }
+            }
+
+            // Dividers
+            [data-h2-breadcrumb-divider] {
+                color: $colorValue;
+            }
+
+        }
+
+    }
+    
+}
