@@ -1,4 +1,4 @@
-// Hydrogen / Components / Accordion / Gulpfile
+// Hydrogen / Components / Breadcrumb / Gulpfile
 
 "use strict";
 
@@ -21,7 +21,7 @@ sass.compiler = require('sass');
 const component = "component-breadcrumb";
 
 // Version
-const verCSS = "0-0-1";
+const verCSS = "0-0-2";
 const verJS = verCSS.replace("-", "").replace("-", "");
 
 // Development Tasks
