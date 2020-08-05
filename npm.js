@@ -1,1 +1,1 @@
-console.log("Component/Breadcrumb is here!");
+console.log("This is the Hydrogen breadcrumb component.");

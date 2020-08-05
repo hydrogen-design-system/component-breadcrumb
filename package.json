@@ -4,7 +4,7 @@
   "description": "Hydrogen's functional breadcrumb component.",
   "main": "npm.js",
   "scripts": {
-    "test": "npx gulp",
+    "dev": "npx gulp dev",
     "build": "npx gulp build"
   },
   "repository": {
@@ -18,12 +18,13 @@
   },
   "homepage": "https://github.com/hydrogen-design-system/component-breadcrumb#readme",
   "dependencies": {
-    "@hydrogen-design-system/core": "file:../../core"
+    "cash-dom": "^8.0.0"
   },
   "devDependencies": {
+    "@hydrogen-design-system/core": "0.0.15",
     "autoprefixer": "^9.7.3",
-    "browserslist": "^4.8.2",
     "browser-sync": "^2.26.7",
+    "browserslist": "^4.8.2",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
@@ -31,6 +32,7 @@
     "gulp-gzip": "^1.4.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.1",
     "sass": "^1.26.8"

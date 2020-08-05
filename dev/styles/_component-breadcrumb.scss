@@ -1,0 +1,49 @@
+// Hydrogen / Components / Breadcrumb
+
+@mixin h2ComponentBreadcrumbReset() {}
+
+@mixin h2ComponentBreadcrumbGeneric() {}
+
+@mixin h2ComponentBreadcrumbCustom(
+    $color, 
+    $line-height, 
+    $margin) {
+
+    // List
+    [data-h2-breadcrumb-list] {
+        margin: calc((#{$margin} / 2) * -1);
+        list-style: none;
+        padding-left: 0;
+    }
+
+    // List Item
+    [data-h2-breadcrumb-list-item] {
+        display: inline-block;
+        line-height: calc(#{$line-height} * 1.5);
+        margin: 0;
+    }
+
+    // Links
+    [data-h2-breadcrumb-link] {
+        color: $color;
+        display: inline-block;
+        margin: calc(#{$margin} / 2);
+    }
+
+    // Current Page
+    [aria-current] {
+        color: $color;
+        font-weight: bold;
+        pointer-events: none;
+        text-decoration: none;
+        &+[data-h2-breadcrumb-divider] {
+            display: none;
+        }
+    }
+
+    // Dividers
+    [data-h2-breadcrumb-divider] {
+        color: $color;
+    }
+
+}
