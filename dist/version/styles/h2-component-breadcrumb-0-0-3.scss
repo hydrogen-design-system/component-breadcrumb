@@ -19,20 +19,20 @@
 @use "component-breadcrumb" as *;
 
 // Load the core and component mixins within the versioned component attribute, while passing them their respective theme variables.
-// 0-0-2 is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
-[data-h2-breadcrumb-0-0-2] {
+// 0-0-3 is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
+[data-h2-breadcrumb-0-0-3] {
     // Load the component's unique reset styles.
-    @include h2ComponentBreadcrumbReset();
+    @include h2-component-breadcrumb-reset();
     // Load the core.
-    @include core.h2UniversalReset;
+    @include core.h2-universal-reset;
     // Load the generic component mixin.
-    @include h2ComponentBreadcrumbGeneric();
+    @include h2-component-breadcrumb-generic();
 }
 
 // Load the custom breadcrumb mixin with its respective theme variables.
 @each $colorKey, $colorValue in maps.$color-map {
-    [data-h2-breadcrumb-0-0-2*="#{$colorKey}"] {
-        @include h2ComponentBreadcrumbCustom(
+    [data-h2-breadcrumb-0-0-3*="#{$colorKey}"] {
+        @include h2-component-breadcrumb-custom(
             $color: $colorValue, 
             $line-height: var.$line-height, 
             $margin: var.$margin

@@ -1,13 +1,14 @@
-// Hydrogen / Components / Breadcrumb
+// Hydrogen / Component / Breadcrumb
 
-@mixin h2ComponentBreadcrumbReset() {}
+@mixin h2-component-breadcrumb-reset() {}
 
-@mixin h2ComponentBreadcrumbGeneric() {}
+@mixin h2-component-breadcrumb-generic() {}
 
-@mixin h2ComponentBreadcrumbCustom(
+@mixin h2-component-breadcrumb-custom(
     $color, 
     $line-height, 
-    $margin) {
+    $margin
+) {
 
     // List
     [data-h2-breadcrumb-list] {

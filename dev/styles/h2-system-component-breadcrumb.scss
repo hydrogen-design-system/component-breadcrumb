@@ -29,13 +29,13 @@
 
 // Load the generic breadcrumb mixin with its respective theme variables.
 [data-h2-breadcrumb] {
-    @include h2ComponentBreadcrumbGeneric();
+    @include h2-component-breadcrumb-generic();
 }
 
 // Load the custom breadcrumb mixin with its respective theme variables.
 @each $colorKey, $colorValue in maps.$color-map {
     [data-h2-breadcrumb*="#{$colorKey}"] {
-        @include h2ComponentBreadcrumbCustom(
+        @include h2-component-breadcrumb-custom(
             $color: $colorValue, 
             $line-height: var.$line-height, 
             $margin: var.$margin
