@@ -3,8 +3,8 @@
 // Border Options
 $border-thickness-thin: 1px !default;
 $border-thickness-thick: .5rem !default;
+
 $border-radius-round: 5px !default;
-$border-radius-pill: 20rem !default;
 
 // Color Variables
 
@@ -16,11 +16,11 @@ $border-radius-pill: 20rem !default;
     $gray: rgba(150, 150, 150, 1) !default;
 
     // Theme Colors
-    $theme-color-1: #F14948 !default;
-    $theme-color-2: #F1604D !default;
-    $theme-color-3: #F47953 !default;
-    $theme-color-4: #F79559 !default;
-    $theme-color-5: #F7AF5B !default;
+    $theme-color-1: #c59fff !default;
+    $theme-color-2: #9D5CFF !default;
+    $theme-color-3: #613DC1 !default;
+    $theme-color-4: #00E5E3 !default;
+    $theme-color-5: #0A9DAE !default;
 
     // Go, Slow, Stop
     $go: green !default;
@@ -140,29 +140,25 @@ $layout-small: 39rem !default;
     $mq-large: "screen and (min-width: 100em)" !default;
 
 // Whitespace Variables
-$margin: 1.25vw !default;
-$padding: 1.25vw !default;
+$margin: 1.5rem !default;
+$padding: 1.5rem !default;
 
 // Component Options
 
     // Cards
-    $card-shadow: 0 3px 5px rgba(0, 0, 0, .5) !default;
-    $card-bg-color: $white !default;
+    $card-shadow: 0 5px 10px rgba(0, 0, 0, .3) !default;
 
     // Carousels
     $carousel-dot-color: lighten($gray, 35%) !default;
     $carousel-dot-active-color: $theme-color-1 !default;
 
-    // Code Blocks
-    $code-bg: $black !default;
-
     // Dialog Sizes
-    $dialog-small-screen: 90vw;
-    $dialog-medium-screen: 75vw;
-    $dialog-large-screen: 50vw;
+    $dialog-small-screen: 90vw !default;
+    $dialog-medium-screen: 75vw !default;
+    $dialog-large-screen: 50vw !default;
 
-    // Horizontal Rules
-    $hr-color: $theme-color-2 !default;
+    // Forms
+    $form-input-radius: 5px !default;
 
     // Menus
     $menu-bg-color: $black !default;
@@ -170,10 +166,3 @@ $padding: 1.25vw !default;
     $menu-font-color: $white !default;
     $menu-divider-color: rgba($theme-color-4, .5) !default;
     $menu-icon-color: $white !default;
-
-    // Pullquotes
-    $pullquote-color: $theme-color-2 !default;
-
-    // Tables
-    $table-heading-color: $theme-color-1 !default;
-    $table-alternating-color: rgba(0, 0, 0, .1) !default;
