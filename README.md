@@ -33,7 +33,7 @@ The code for this component can be found in:
 You will need:
 - [Node](https://nodejs.org/en/)
 
-### Important Commands
+### Important commands
 - `npm install`
   - installs all development dependencies
 - `npm run dev`
