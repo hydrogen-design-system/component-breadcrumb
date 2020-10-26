@@ -134,20 +134,6 @@ var argv = require('yargs')
     .pipe(dest("tests"));
   }
 
-// Gulp Tasks
-
-  // Replace Vars in Gulpfiles
-  function initGulpDevReplace() {
-    return src("tasks/dev.js")
-    .pipe(replace("$COMP", argv.c))
-    .pipe(dest("tasks"));
-  }
-  function initGulpBuildReplace() {
-    return src("tasks/build.js")
-    .pipe(replace("$COMP", argv.c))
-    .pipe(dest("tasks"));
-  }
-
 // Replace Vars in NPM
 function initNpmReplace() {
   return src("./npm.js")
@@ -158,6 +144,7 @@ function initNpmReplace() {
 // Replace Vars in package.json
 function initPackageReplace() {
   return src("./package.json")
+  .pipe(replace("component-core", argv.c))
   .pipe(replace("component-comp", "component-" + argv.c))
   .pipe(dest("./"));
 }
@@ -167,11 +154,6 @@ function initReadMeReplace() {
   return src("./README.md")
   .pipe(replace("$COMP", argv.c))
   .pipe(dest("./"));
-}
-
-// Delete the Init
-function deleteInit() {
-  return del("tasks/init.js");
 }
 
 // Exports
@@ -196,10 +178,7 @@ function deleteInit() {
     initDevStyleVersionRename, 
     initDevStyleVersionDelete, 
     initTestMarkupReplace, 
-    initGulpDevReplace, 
-    initGulpBuildReplace, 
     initNpmReplace, 
     initPackageReplace, 
-    initReadMeReplace, 
-    deleteInit
+    initReadMeReplace
   );
