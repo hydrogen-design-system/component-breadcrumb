@@ -46,19 +46,19 @@
   margin: 0;
 }
 [data-h2-breadcrumb] h1 {
-  font-size: calc(calc(calc(calc(calc(1rem*(1.333))*(1.333))*(1.333))*(1.333))*(1.333));
+  font-size: calc(calc(calc(calc(calc(1rem*1.333)*1.333)*1.333)*1.333)*1.333);
 }
 [data-h2-breadcrumb] h2 {
-  font-size: calc(calc(calc(calc(1rem*(1.333))*(1.333))*(1.333))*(1.333));
+  font-size: calc(calc(calc(calc(1rem*1.333)*1.333)*1.333)*1.333);
 }
 [data-h2-breadcrumb] h3 {
-  font-size: calc(calc(calc(1rem*(1.333))*(1.333))*(1.333));
+  font-size: calc(calc(calc(1rem*1.333)*1.333)*1.333);
 }
 [data-h2-breadcrumb] h4 {
-  font-size: calc(calc(1rem*(1.333))*(1.333));
+  font-size: calc(calc(1rem*1.333)*1.333);
 }
 [data-h2-breadcrumb] h5 {
-  font-size: calc(1rem*(1.333));
+  font-size: calc(1rem*1.333);
 }
 [data-h2-breadcrumb] h6 {
   font-size: 1rem;
@@ -105,7 +105,8 @@
 [data-h2-breadcrumb] ul,
 [data-h2-breadcrumb] ol {
   font-family: sans-serif;
-  padding-left: calc(1.5rem * 2);
+  margin: 0;
+  padding-left: 1.5rem;
 }
 [data-h2-breadcrumb] ul li,
 [data-h2-breadcrumb] ol li {
